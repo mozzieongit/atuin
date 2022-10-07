@@ -111,7 +111,7 @@ pub fn print_regular(w: &mut StdoutLock, h: &[History]) {
         let time = h.timestamp.format("%Y-%m-%d %H:%M:%S");
         let cmd = h.command.trim();
 
-        writeln!(w, "{time}\t{cmd}\t{duration}").expect("failed to write history");
+        writeln!(w, "{time}\t{duration}\t{cmd}").expect("failed to write history");
     }
 }
 
